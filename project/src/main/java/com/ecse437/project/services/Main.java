@@ -10,11 +10,14 @@ public class Main {
 	static Random rand = new Random();
 
 	public static String generateAlgorithmOutput(Algorithm algorithm) throws IllegalAlgorithmException {
-		int n = rand.nextInt(0, 11);
-		
+		int n;
 		switch(algorithm) {
 		  case Factorial:
+			n = rand.nextInt(0, 11);
 			return computeResultAndRuntime(n, new Factorial());
+		  case Prime:
+			n = rand.nextInt(0, 500);
+			return computeResultAndRuntime(n, new Prime());
 		  default:
 		    throw new IllegalAlgorithmException(algorithm);
 		}
@@ -23,12 +26,11 @@ public class Main {
 	private static String computeResultAndRuntime(int n, Function function) {
 		long startTime = System.nanoTime();
 		
-		long res = function.compute(n);
+		String res = function.compute(n);
 				
 		long endTime = System.nanoTime();
 		
-	    return "<h3>"+"Factorial of "+n+" = "+res+"</h3>"
-			+ "<h4>Runtime: "+(endTime - startTime)+" nanoseconds</h4>";
+	    return function.Print(n, res, (endTime - startTime));
 	}
 
 	public static String generateMenu() {

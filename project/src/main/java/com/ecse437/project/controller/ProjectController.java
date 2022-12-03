@@ -20,4 +20,9 @@ public class ProjectController {
 		return Main.generateAlgorithmOutput(Common.Algorithm.Factorial);
 	}
 
+	@GetMapping("/Prime")
+	public String function2() throws IllegalAlgorithmException {
+		return Main.generateAlgorithmOutput(Common.Algorithm.Prime);
+	}
+
 }
