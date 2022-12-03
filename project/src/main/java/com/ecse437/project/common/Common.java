@@ -4,5 +4,8 @@ public class Common {
 	public static enum Algorithm {
 		  Factorial,
 		  Prime,
+		  Binary,
+		  Hexa,
+		  Squared
 		}
 }

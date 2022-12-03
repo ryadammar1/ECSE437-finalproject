@@ -13,11 +13,20 @@ public class Main {
 		int n;
 		switch(algorithm) {
 		  case Factorial:
-			n = rand.nextInt(0, 11);
+			n = rand.nextInt(0, 11); // Past 10 is where the factorial values tend to get way too big
 			return computeResultAndRuntime(n, new Factorial());
 		  case Prime:
-			n = rand.nextInt(0, 500);
+			n = rand.nextInt(0, 512);
 			return computeResultAndRuntime(n, new Prime());
+		  case Binary:
+			n = rand.nextInt(0, 256);
+			return computeResultAndRuntime(n, new Binary());
+		  case Hexa:
+			n = rand.nextInt(0, 2024);
+			return computeResultAndRuntime(n, new Hexa());
+		  case Squared:
+			n = rand.nextInt(0, 256);
+			return computeResultAndRuntime(n, new Squared());
 		  default:
 		    throw new IllegalAlgorithmException(algorithm);
 		}

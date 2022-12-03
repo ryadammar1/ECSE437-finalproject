@@ -24,5 +24,20 @@ public class ProjectController {
 	public String function2() throws IllegalAlgorithmException {
 		return Main.generateAlgorithmOutput(Common.Algorithm.Prime);
 	}
+	
+	@GetMapping("/Binary")
+	public String function3() throws IllegalAlgorithmException {
+		return Main.generateAlgorithmOutput(Common.Algorithm.Binary);
+	}
+
+	@GetMapping("/Hexa")
+	public String function4() throws IllegalAlgorithmException {
+		return Main.generateAlgorithmOutput(Common.Algorithm.Hexa);
+	}
+	
+	@GetMapping("/Squared")
+	public String function5() throws IllegalAlgorithmException {
+		return Main.generateAlgorithmOutput(Common.Algorithm.Squared);
+	}
 
 }
