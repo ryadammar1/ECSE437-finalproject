@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY src ./src
 COPY build.gradle settings.gradle ./
-COPY build/ /build/
 COPY gradle/ /gradle/
 
 EXPOSE 8080
