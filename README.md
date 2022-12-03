@@ -4,7 +4,7 @@
 
 From the root of the project:
 ```
-docker build --tag java-docker . && docker run -it -p 8080:8080 java-docker
+make run
 ```
 
 The service will be available at http://localhost:8080/
