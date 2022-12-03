@@ -6,8 +6,6 @@ plugins {
 
 group = 'com.ecse437'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 8
-targetCompatibility = 8
 
 repositories {
 	mavenCentral()
