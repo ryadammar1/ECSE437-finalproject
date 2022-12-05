@@ -20,7 +20,7 @@ class IllegalAlgorithmExceptionTests {
 			throw new IllegalAlgorithmException(Algorithm.Binary);
 		});
 		
-		String expectedMessage = "Unsupported algorithm: ";
+		String expectedMessage = "Unsupported algorithm: Binary";
 	    String actualMessage = exception.getMessage();
 
 	    assertTrue(actualMessage.contains(expectedMessage));
