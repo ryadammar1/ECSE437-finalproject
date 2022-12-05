@@ -16,7 +16,7 @@ public class Main {
 			n = rand.nextInt(0, 11); // Past 10 is where the factorial values tend to get way too big
 			return computeResultAndRuntime(n, new Factorial());
 		  case Prime:
-			n = rand.nextInt(0, 512);
+			n = rand.nextInt(2, 512);
 			return computeResultAndRuntime(n, new Prime());
 		  case Binary:
 			n = rand.nextInt(0, 256);
