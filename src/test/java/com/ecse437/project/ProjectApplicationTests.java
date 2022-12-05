@@ -72,7 +72,7 @@ class ProjectApplicationTests {
 		squared = new Squared();
 		assertThat(squared.compute(122).toString()).isEqualTo("14884");
 	}
-	
+	 
 	@Test
 	void SystemIntegration() throws IllegalAlgorithmException {
 		assertThat(Main.generateAlgorithmOutput(Algorithm.Factorial).toString()).isNotNull();
