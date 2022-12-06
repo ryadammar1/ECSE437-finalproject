@@ -2,6 +2,10 @@ package com.ecse437.project.services;
 
 public class Hexa implements Function{
 	public String compute(int n) {
+		 if (n == 0) {
+			 return "0";
+		 }
+		 
 	     int rem;
 	        
 	     String res=""; 
