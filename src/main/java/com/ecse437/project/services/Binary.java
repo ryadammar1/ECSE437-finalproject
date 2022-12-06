@@ -2,6 +2,10 @@ package com.ecse437.project.services;
 
 public class Binary implements Function {
 	public String compute(int n) {
+		if (n == 0) {
+			 return "0";
+		 }
+		
 		String s = "";
 	    while (n > 0)
 	    {
