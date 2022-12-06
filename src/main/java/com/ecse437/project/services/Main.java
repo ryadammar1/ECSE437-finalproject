@@ -6,7 +6,7 @@ import com.ecse437.project.exceptions.IllegalAlgorithmException;
 
 public class Main {
 	
-	private static MyRandomUtility randUtil = new MyRandomUtility();
+	public static MyRandomUtility randUtil = new MyRandomUtility();
 
 	public static String generateAlgorithmOutput(Algorithm algorithm) throws IllegalAlgorithmException {
 		int n;

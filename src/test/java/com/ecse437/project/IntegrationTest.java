@@ -5,7 +5,7 @@ import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.ecse437.project.common.Common.Algorithm;
@@ -16,12 +16,13 @@ import com.ecse437.project.services.Main;
 @SpringBootTest
 class IntegrationTest {
 
-	@Mock
-	MyRandomUtility randUtil;
-	
 	@Test
 	void testIntegration() throws IllegalAlgorithmException {
-		when(randUtil.getRandom(anyInt(), anyInt())).thenReturn((int)10);
+		MyRandomUtility randUtilMock = Mockito.mock(MyRandomUtility.class);
+		when(randUtilMock.getRandom(anyInt(), anyInt())).thenReturn((int)10);
+		
+		Main.randUtil = randUtilMock;
+		
 		int n = 10;
 		String res = "1010";
 		
